@@ -54,8 +54,8 @@ export function SignUpForm({ onToggleAuth }) {
 
   return (
     <div className="card" style={{ width: '100%', maxWidth: '420px', margin: '0' }}>
-      <h2 className="page-title text-green" style={{ textAlign: 'center' }}>Create Account</h2>
-      <p className="page-subtitle" style={{ textAlign: 'center', marginBottom: '24px' }}>Join Manzil for smart alerts</p>
+      <h2 className="page-title text-green" style={{ textAlign: 'center', fontSize: '1.4rem', marginBottom: '4px' }}>Create Account</h2>
+      <p className="page-subtitle" style={{ textAlign: 'center', marginBottom: '16px', fontSize: '0.85rem' }}>Join Manzil for smart alerts</p>
       
       {error && <div style={{ color: '#E74C3C', marginBottom: '16px', textAlign: 'center', fontSize: '0.9rem', background: 'rgba(231, 76, 60, 0.1)', padding: '8px', borderRadius: 'var(--radius-sm)' }}>{error}</div>}
       
