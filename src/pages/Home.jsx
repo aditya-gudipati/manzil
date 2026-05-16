@@ -119,6 +119,7 @@ export default function Home() {
             }}
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
+            className="home-carousel-track"
             >
               {featureSlides.map((slide, i) => (
                 <div
@@ -234,7 +235,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="features-grid" style={{ padding: '0', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', width: '100%', marginBottom: '40px' }}>
+        <div className="home-feature-grid" style={{ padding: '0', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', width: '100%', marginBottom: '40px' }}>
           
           <div className="feature-card green" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: '16px', background: 'rgba(255, 255, 255, 0.15)', backdropFilter: 'blur(16px)', border: '1px solid rgba(255, 255, 255, 0.2)' }}>
             <div style={{ background: 'rgba(255, 255, 255, 0.9)', padding: '16px', borderRadius: '16px', width: 'fit-content' }}>
@@ -258,7 +259,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="feature-card brown" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: '16px', background: 'rgba(255, 255, 255, 0.15)', backdropFilter: 'blur(16px)', border: '1px solid rgba(255, 255, 255, 0.2)', gridColumn: 'span 2' }}>
+          <div className="feature-card brown home-span-card" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: '16px', background: 'rgba(255, 255, 255, 0.15)', backdropFilter: 'blur(16px)', border: '1px solid rgba(255, 255, 255, 0.2)', gridColumn: 'span 2' }}>
             <div style={{ background: 'rgba(255, 255, 255, 0.9)', padding: '16px', borderRadius: '16px', width: 'fit-content' }}>
                <Star size={32} color="var(--accent-brown)" />
             </div>
@@ -275,6 +276,24 @@ export default function Home() {
           .custom-scrollbar::-webkit-scrollbar { width: 4px; }
           .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
           .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+
+          /* Mobile: stack feature cards vertically */
+          @media (max-width: 600px) {
+            .home-feature-grid {
+              grid-template-columns: 1fr !important;
+            }
+            .home-span-card {
+              grid-column: span 1 !important;
+            }
+            /* Shrink carousel cards to fit mobile screen */
+            .home-carousel-track > div {
+              width: min(88vw, 700px) !important;
+            }
+            /* Reduce hero font on small screens */
+            .home-welcome h1 {
+              font-size: 1.8rem !important;
+            }
+          }
         `}</style>
       </div>
     </PageTransition>
