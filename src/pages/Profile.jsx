@@ -21,7 +21,7 @@ export default function Profile() {
 
   return (
     <PageTransition>
-      <div style={{ display: 'flex', flexDirection: 'column', minHeight: 'calc(100vh - 80px)', overflowY: 'auto', WebkitOverflowScrolling: 'touch', padding: '16px 24px', boxSizing: 'border-box', maxWidth: '800px', margin: '0 auto', width: '100%', gap: '12px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: 'calc(100vh - 80px)', padding: '16px 24px', boxSizing: 'border-box', maxWidth: '800px', margin: '0 auto', width: '100%', gap: '12px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <h1 style={{ fontSize: '1.3rem', margin: 0, color: 'white' }}>Profile</h1>
           <span className={`badge badge-${user?.plan}`} style={{ textTransform: 'capitalize' }}>

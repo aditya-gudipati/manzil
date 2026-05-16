@@ -35,7 +35,7 @@ export default function Subscriptions() {
 
   return (
     <PageTransition>
-      <div style={{ display: 'flex', flexDirection: 'column', minHeight: 'calc(100vh - 80px)', overflowY: 'auto', WebkitOverflowScrolling: 'touch', padding: '24px', boxSizing: 'border-box', maxWidth: '1100px', margin: '0 auto', width: '100%' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: 'calc(100vh - 80px)', padding: '24px', boxSizing: 'border-box', maxWidth: '1100px', margin: '0 auto', width: '100%' }}>
         <div className="page-header">
           <h1 className="page-title" style={{ color: 'var(--accent-brown)' }}>Subscriptions</h1>
           <p className="page-subtitle">Upgrade your travel experience</p>

@@ -140,7 +140,7 @@ export default function Trips() {
         </div>
 
         {/* Right Panel */}
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflowY: 'auto', WebkitOverflowScrolling: 'touch', position: 'relative', minWidth: 0 }} className="custom-scrollbar">
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative', minWidth: 0 }} className="custom-scrollbar">
           
           {/* Change 2: Alarm Popup (Bottom-Right) */}
           {isAlarmRinging && (
