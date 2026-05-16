@@ -74,7 +74,16 @@ export function SignInForm({ onToggleAuth }) {
 
 export default function SignIn() {
   return (
-    <div className="page-container" style={{ justifyContent: 'center', padding: '20px' }}>
+    <div style={{
+      minHeight: '100vh',
+      overflowY: 'auto',
+      WebkitOverflowScrolling: 'touch',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '24px 16px 60px',
+      boxSizing: 'border-box'
+    }}>
       <SignInForm />
     </div>
   );

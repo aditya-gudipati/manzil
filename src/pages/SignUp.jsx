@@ -70,15 +70,13 @@ export function SignUpForm({ onToggleAuth }) {
           <input type="email" name="email" required onChange={handleChange} value={formData.email} />
         </div>
         
-        <div className="form-grid">
-          <div className="input-group">
-            <label>Password</label>
-            <input type="password" name="password" required onChange={handleChange} value={formData.password} />
-          </div>
-          <div className="input-group">
-            <label>Confirm</label>
-            <input type="password" name="confirmPassword" required onChange={handleChange} value={formData.confirmPassword} />
-          </div>
+        <div className="input-group">
+          <label>Password</label>
+          <input type="password" name="password" required onChange={handleChange} value={formData.password} />
+        </div>
+        <div className="input-group">
+          <label>Confirm Password</label>
+          <input type="password" name="confirmPassword" required onChange={handleChange} value={formData.confirmPassword} />
         </div>
         
         <div className="input-group">
@@ -86,19 +84,17 @@ export function SignUpForm({ onToggleAuth }) {
           <input type="tel" name="phone" required onChange={handleChange} value={formData.phone} />
         </div>
         
-        <div className="form-grid">
-          <div className="input-group">
-            <label>Age</label>
-            <input type="number" name="age" required onChange={handleChange} value={formData.age} />
-          </div>
-          <div className="input-group">
-            <label>Gender</label>
-            <select name="gender" onChange={handleChange} value={formData.gender}>
-              <option>Male</option>
-              <option>Female</option>
-              <option>Other</option>
-            </select>
-          </div>
+        <div className="input-group">
+          <label>Age</label>
+          <input type="number" name="age" required onChange={handleChange} value={formData.age} />
+        </div>
+        <div className="input-group">
+          <label>Gender</label>
+          <select name="gender" onChange={handleChange} value={formData.gender}>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
         </div>
         
         <div className="input-group">
@@ -130,7 +126,16 @@ export function SignUpForm({ onToggleAuth }) {
 
 export default function SignUp() {
   return (
-    <div className="page-container" style={{ padding: '20px' }}>
+    <div style={{
+      minHeight: '100vh',
+      overflowY: 'auto',
+      WebkitOverflowScrolling: 'touch',
+      display: 'flex',
+      alignItems: 'flex-start',
+      justifyContent: 'center',
+      padding: '24px 16px 60px',
+      boxSizing: 'border-box'
+    }}>
       <SignUpForm />
     </div>
   );
